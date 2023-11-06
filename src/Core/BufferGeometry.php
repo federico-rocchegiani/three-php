@@ -240,9 +240,10 @@ class BufferGeometry extends EventDispatcher
     public function normalizeNormals()
     {
         $normals = $this->attributes->normal;
+        $vector = new Vector3();
 
         for ($i = 0, $il = count($normals); $i < $il; $i++) {
-            $vector = $normals->fromBufferAttribute($i);
+            $vector->fromBufferAttribute($normals, $i);
             $vector->normalize();
             $normals->setXYZ($i, $vector->x, $vector->y, $vector->z);
         }
