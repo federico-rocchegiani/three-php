@@ -1,0 +1,17 @@
+{
+    "name": "federico.rocchegiani/three-php",
+    "description": "A transcription of threejs in php",
+    "require": {
+        "php": "^7.2 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThreePHP\\": "src/"
+        },
+        "files": [
+            "src/Utils.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false
+}
