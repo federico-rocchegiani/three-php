@@ -117,9 +117,8 @@ class STLExporter
 
         $cb = (new Vector3())->subVectors($vC, $vB);
         $ab = (new Vector3())->subVectors($vA, $vB);
-        $cb = (new Vector3())->cross($ab)->normalize();
 
-        $normal = (new Vector3())->copy($cb)->normalize();
+        $normal = $cb->clone()->cross($ab)->normalize();
 
 
         if ($binary === true) {
